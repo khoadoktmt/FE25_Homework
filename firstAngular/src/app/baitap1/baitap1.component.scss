@@ -1,0 +1,50 @@
+@mixin headerfooter ($bg) {
+    background-color: $bg;
+    color: #fff;
+    height: 30px;
+    text-align: center;
+    padding: 20px;
+    display: block;
+}
+
+@mixin cs ($width, $color) {
+    width: $width;
+    background-color: $color;
+    text-align: center;
+    padding: 100px;
+}
+
+.header {
+    // background-color: red;
+    // color: #fff;
+    // height: 30px;
+    // text-align: center;
+    // padding: 20px;
+    // display: block;
+    @include headerfooter(red);
+}
+
+.footer {
+    @include headerfooter(blue);
+}
+
+.contents {
+    display: flex;
+    .content {
+        // width: 70%;
+        // background-color: orange;
+        // text-align: center;
+        // padding: 100px;
+
+        @include cs(70%, orange);
+    }
+    .sidebar {
+        // width: 30%;
+        // background-color: green;
+        // text-align: center;
+        // padding: 100px;
+
+        @include cs(30%, green);
+    }
+}
+

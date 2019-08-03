@@ -1,0 +1,83 @@
+<p>ng-if works!</p>
+
+<div>
+    <span>*ngIf Demo:</span>
+    <div *ngIf="status">Cybersoft</div>
+    <button class="btn btn-success" (click)="show()">Show</button>
+    <button class="btn btn-danger" (click)="hidden()">Hidden</button>
+</div>
+
+<div *ngIf="statusLogin; else DangXuat">
+    <button class="btn btn-danger" (click)="Logout()">Log out</button>
+    <p>Hello {{myname}}</p>
+</div>
+
+<ng-template #DangXuat>
+    <div>
+        <button class="btn btn-success" (click)="Login()">Login</button>
+    </div>
+</ng-template>
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+
+            <li class="nav-item" data-toggle="modal" data-target="#modeId" *ngIf="!usrstatusLogin; else UsrDangNhap">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <!-- The Modal -->
+    <div class="modal" id="modeId">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" #name>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="text" class="form-control" id="pwd" #pass>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary"
+                        (click)="UsrLogin(name.value, pass.value)">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #UsrDangNhap>
+    <li class="nav-item" data-toggle="modal" data-target="#modeId">
+        <a class="nav-link" href="#">Hello {{username}}</a>
+    </li>
+</ng-template>

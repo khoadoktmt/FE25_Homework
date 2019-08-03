@@ -1,0 +1,16 @@
+<h2>In onewaybinding component!</h2>
+<p>=====</p>
+
+<h3 style="color: coral">interpolation bingding</h3>
+<p>{{name}}</p> 
+<p>=====</p>
+
+<h3 style="color: coral">property bingding</h3>
+<input type="text" [value]="name" #thamso>
+<!-- <input type="text" value="CyberSoft"> -->
+<!-- #thamso <=> id="..." -->
+<p>=====</p>
+
+<h3 style="color: coral">event bingding</h3>
+<button class="btn btn-success" (click)="eventBinding(thamso.value)">event binding demo</button>
+<p>=====</p>

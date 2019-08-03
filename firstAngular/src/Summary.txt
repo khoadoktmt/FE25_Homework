@@ -1,0 +1,18 @@
+1/8/2019:
+- Add Bootstrap in public/index.html (entry point)
+- Install Libs into prj: npm install jquery popper.js bootstrap --save (, then delete 4 links in entry point)
+    + Add already installed libs into angular.json file
+    + Remember reload prj
+
+- DataBinding:
+    + One Way
+        ++ Interpolation {{...}} 
+        ++ Property Binding [...]
+        ++ Event Binding (...)
+    + Two Way
+        ++ ngModel: Property + Event Binding [(...)]
+     
+- Directive:
+    + Component Directive ( like Preprocessor in C )
+        ++ *ngIf
+        ++ *ngIf else

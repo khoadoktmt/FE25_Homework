@@ -1,0 +1,12 @@
+<h3 style="color: coral">In baitapbinding</h3>
+
+<span>email:  </span>
+<input type="text" [value]="email" [(ngModel)]="email">
+<br>
+<span>fullname:  </span>
+<input type="text" [value]="fullname" #param>
+<br>
+<button class="btn btn-success" (click)="namedisplay(param.value)">Submit</button>
+
+<p>email: {{email}}</p>
+<p>fullname: {{fullname}}</p>
