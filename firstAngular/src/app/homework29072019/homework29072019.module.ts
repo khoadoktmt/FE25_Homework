@@ -7,22 +7,16 @@ import { HeaderComponent } from './header/header.component';
 
 import { BannerComponent } from './banner/banner.component';
 
-import { BestSmartPhoneComponent } from './best-smart-phone/best-smart-phone.component';
-import { SmartPhone01Component } from './best-smart-phone/smart-phone01/smart-phone01.component';
-import { SmartPhone02Component } from './best-smart-phone/smart-phone02/smart-phone02.component';
-import { SmartPhone03Component } from './best-smart-phone/smart-phone03/smart-phone03.component';
-import { SmartPhone04Component } from './best-smart-phone/smart-phone04/smart-phone04.component';
+import { BestSmartPhoneComponent } from './products/best-smart-phone/best-smart-phone.component';
+import { SmartPhoneComponent } from './products/best-smart-phone/smart-phone/smart-phone.component';
 
-import { BestSmartLaptopComponent } from './best-smart-laptop/best-smart-laptop.component';
-import { Laptop01Component } from './best-smart-laptop/laptop01/laptop01.component';
-import { Laptop02Component } from './best-smart-laptop/laptop02/laptop02.component';
-import { Laptop03Component } from './best-smart-laptop/laptop03/laptop03.component';
-import { Laptop04Component } from './best-smart-laptop/laptop04/laptop04.component';
+import { BestSmartLaptopComponent } from './products/best-smart-laptop/best-smart-laptop.component';
+import { LaptopComponent } from './products/best-smart-laptop/laptop/laptop.component';
 
 import { ProductionComponent } from './production/production.component';
-import { Production01Component } from './production/production01/production01.component';
-import { Production02Component } from './production/production02/production02.component';
-import { Production03Component } from './production/production03/production03.component';
+import { SubProductionComponent } from './production/sub-production/sub-production.component';
+
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
@@ -33,17 +27,14 @@ import { Production03Component } from './production/production03/production03.co
     BestSmartPhoneComponent,
     BestSmartLaptopComponent,
     ProductionComponent,
-    SmartPhone01Component,
-    SmartPhone02Component,
-    SmartPhone03Component,
-    SmartPhone04Component,
-    Laptop01Component,
-    Laptop02Component,
-    Laptop03Component,
-    Laptop04Component,
-    Production01Component,
-    Production02Component,
-    Production03Component
+
+    SmartPhoneComponent,
+    
+    LaptopComponent,
+    
+    SubProductionComponent,
+
+    ProductsComponent
   ],
 
   imports: [
@@ -56,17 +47,13 @@ import { Production03Component } from './production/production03/production03.co
     // Still work when comment ??? why ??? assume: "export class" ???
     HeaderComponent,
     BannerComponent,
+    ProductsComponent,
     BestSmartPhoneComponent,
+    SmartPhoneComponent,
     BestSmartLaptopComponent,
+    LaptopComponent,
     ProductionComponent,
-    SmartPhone01Component,
-    SmartPhone02Component,
-    SmartPhone03Component,
-    SmartPhone04Component,
-    Laptop01Component,
-    Laptop02Component,
-    Laptop03Component,
-    Laptop04Component
+    SubProductionComponent,
   ],
 })
 export class Homework29072019Module { }
