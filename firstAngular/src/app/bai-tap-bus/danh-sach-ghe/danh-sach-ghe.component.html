@@ -1,0 +1,13 @@
+<!-- <p>danh-sach-ghe works!</p> -->
+
+<div class="container">
+    <div class="row">
+        <h3>BT Bus Ticket Booking</h3>
+        <div class="col-sm-6">
+            <ng-container *ngFor="let item of dsGhe; let stt = index">
+                <app-item-ghe [ghe]="item"></app-item-ghe>
+                <br *ngIf="(stt+1) % 4 === 0" />
+            </ng-container>
+        </div>
+    </div>
+</div>

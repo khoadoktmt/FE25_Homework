@@ -1,0 +1,53 @@
+<p>baitap-ng-for works!</p>
+
+<div class="m-auto w-75">
+    <div class="form-group w-50 m-auto">
+        <label for=""></label>
+
+        <small id="helpId" class="form-text text-muted">Ma SP</small>
+        <input type="text" class="form-control" name="" id="MaSp" aria-describedby="helpId" placeholder="Ma SP" #masp>
+
+        <small id="helpId" class="form-text text-muted">Ten SP</small>
+        <input type="text" class="form-control" name="" id="TenSp" aria-describedby="helpId" placeholder="Ten SP"
+            #tensp>
+
+        <small id="helpId" class="form-text text-muted">Gia</small>
+        <input type="text" class="form-control" name="" id="Gia" aria-describedby="helpId" placeholder="Gia" #gia>
+
+        <button type="submit" class="btn btn-success" (click)="ThemSanPham(masp.value, tensp.value, gia.value)">Them San
+            Pham</button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Ma SP</th>
+                    <th>Ten SP</th>
+                    <th>Gia</th>
+                </tr>
+            </thead>
+            <ng-container *ngIf="sanPham && sanPham.length">
+                <!-- <div *ngIf="sanPham && sanPham.length"> generate wrong HTML -->
+                <tbody>
+                    <tr *ngFor="let item of sanPham, let stt = index" [ngClass]="{bg:stt%2===0}">
+                        <td>{{stt}}</td>
+                        <td>{{item.Ma_SP}}</td>
+                        <td>{{item.Ten_SP}}</td>
+                        <td>{{item.Gia}}</td>
+                    </tr>
+                </tbody>
+                <!-- </div>  generate wrong HTML -->
+            </ng-container>
+        </table>
+    </div>
+</div>
+
+<!-- Non display template because of wrong name -->
+<!-- <ng-container *ngTemplateOutlet="ABC"> </ng-container> -->
+<!-- right name -->
+<ng-container *ngTemplateOutlet="template"> </ng-container>
+<ng-template #template>
+    <div>CyberSoft</div>
+</ng-template>

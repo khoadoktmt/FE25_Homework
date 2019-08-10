@@ -1,0 +1,35 @@
+<!-- <p>danh-sach-phim works!</p> -->
+
+<!-- <div class="container" *ngFor="let item of danhSachPhim; let stt=index"> -->
+<!-- {{stt}} -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let item of danhSachPhim">
+            <app-item-phim [phim]="item" (eventPhim)=thich($event)></app-item-phim>
+        </div>
+
+        <button class="btn btn-success m-3" (click)="viewChildren()">View Children</button>
+        
+        <div class="row">
+            <p>Danh Sach Like</p>
+            <div class="col-sm-12">
+                <p *ngFor="let like of danhSachLike">
+                    {{like.tenPhim}} - {{ like.soLike }}
+                </p>
+            </div>
+        </div>
+
+        <!-- replace by *ngFor -->
+        <!-- <div class="col-sm-3">
+            <app-item-phim></app-item-phim>
+        </div>
+
+        <div class="col-sm-3">
+            <app-item-phim></app-item-phim>
+        </div>
+
+        <div class="col-sm-3">
+            <app-item-phim></app-item-phim>
+        </div> -->
+    </div>
+</div>

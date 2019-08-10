@@ -1,0 +1,27 @@
+
+<div>
+    <p>ng-content works!</p>
+    <p>Pass data from component to SUB component</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <app-ng-content-itemcard>
+                <span class="tenSP">IPhoneX</span>
+                <span class="noidung">Lorem</span>
+                <span class="giaSP">2000</span>
+            </app-ng-content-itemcard>
+        </div>
+
+        <div class="col-sm-4">
+            <app-ng-content-itemcard>
+                <span class="giaSP">50000</span>
+            </app-ng-content-itemcard>
+        </div>
+
+        <div class="col-sm-4">
+            <app-ng-content-itemcard></app-ng-content-itemcard>
+        </div>
+    </div>
+</div>

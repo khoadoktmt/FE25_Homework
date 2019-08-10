@@ -1,0 +1,15 @@
+<p style="color: red">ng-switch works!</p>
+
+<div [ngSwitch]="dkSwitch">
+    <div *ngSwitchCase="'red'" style="color: red;">Mau Do</div>
+    <div *ngSwitchCase="'blue'" style="color: blue;">Mau Xanh</div>
+    <div *ngSwitchCase="'green'" style="color: green;">Mau Xanh La Cay</div>
+    <div *ngSwitchDefault style="color: pink;">Mau Hong</div>
+</div>
+
+<select #t (change)="changeColor(t.value)" id="">
+    <option value="red">Mau Do</option>
+    <option value="blue">Mau Xanh</option>
+    <option value="green">Mau Xanh La Cay</option>
+    <option value="pink">Mau Hong</option>
+</select>

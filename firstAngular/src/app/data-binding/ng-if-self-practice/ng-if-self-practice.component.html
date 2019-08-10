@@ -1,0 +1,24 @@
+<p>ng-if-self-practice!</p>
+<p>ngIf & ngElse</p>
+
+<button class="btn btn-success" (click)="Show()">Show/Hide Item</button>
+<button class="btn btn-danger" (click)="Hide()">Hide Item</button>
+
+<div *ngIf="login; else NothingContent">
+    <div *ngIf="status; else LogoutContent">
+        <span>Hello {{ usrname }} </span>
+        <button class="btn btn-danger" (click)="Logout()">Logout</button>
+    </div>
+    <ng-template #LogoutContent>
+        <span>Login: </span>
+        <input type="text" id="username" name="username" placeholder="enter your name" #username>
+        <button class="btn btn-success" (click)="Login(username)">Login</button>
+        <p *ngIf="checkLogin">Wrong or Null</p>
+    </ng-template>
+</div>
+
+<div>
+    <ng-template #NothingContent>
+        <p class="text-danger">Nothing</p>
+    </ng-template>
+</div>

@@ -1,0 +1,14 @@
+<p>ng-switch-self-practice works!</p>
+
+<div [ngSwitch]="switchCondition">
+    <p *ngSwitchCase="'red'" style="color: red">Text Color</p>
+    <p *ngSwitchCase="'green'" style="color: green">Text Color</p>
+    <p *ngSwitchCase="'blue'" style="color: blue">Text Color</p>
+    <p *ngSwitchDefault style="color: red">Text Color</p>
+</div>
+
+<select name="textcolor" id="textcolor" (change)="colorChange(color.value)" #color>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+</select>

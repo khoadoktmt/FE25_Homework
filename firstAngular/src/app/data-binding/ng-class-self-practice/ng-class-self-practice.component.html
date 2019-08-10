@@ -1,0 +1,7 @@
+<p>ng-class-self-practice works!</p>
+
+<div>
+    <button type="submit" class="btn btn-success" (click)="changeColor()">Change Color</button>
+    <span class="checkColor" [ngClass]="{checkColor:textcolor}">test ngClass</span>
+    <p class="checkColor" [ngStyle]="{'color':redcolor}">test ngStyle</p>
+</div>
